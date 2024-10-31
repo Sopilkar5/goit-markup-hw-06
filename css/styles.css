@@ -71,10 +71,11 @@ ul{
   }
 
 .container {
-    width: 1158px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
+    max-width: 320px;
+   margin: 0 auto;
+    padding-left: 16px;
+   padding-right: 16px;
+    }
 .page-nav{
     display: flex;
     align-items: center;
@@ -181,14 +182,19 @@ font-family: "Roboto", sans-serif;
 background-color: #404BBF;
 }
 .quality{
-    padding: 120px 0;
+    /* padding: 120px 0; */
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
+
 .quality-list{
-    display: flex; 
-    gap: 24px;
+    display: flex;
+    flex-wrap: wrap; 
+    /* gap: 24px; */
+    gap: 72px;
 }
 .quality-link{
-    width: calc((100% - 72px) / 4);
+    flex-basis: 100%;
 }
 .icon-container{
 border: 1px solid #8e8f99;
@@ -201,6 +207,7 @@ border: 1px solid #8e8f99;
     align-items: center;
         justify-content: center;
         margin-bottom: 8px; 
+        display: none;
 }
 .quality-icon{
    position: absolute;
@@ -209,21 +216,35 @@ top: 50%;
     transform: translate(-50%, -50%);
 }
 .quality-name{
-    font-family: "Roboto", sans-serif;
+    /* font-family: "Roboto", sans-serif;
         font-weight: 500;
         font-size: 20px;
         line-height: 1.2;
         letter-spacing: 0.02em;
         color: #2e2f42;
+        margin-bottom: 8px; */
+    font-family: "Roboto", sans-serif;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.11;
+        letter-spacing: 0.02em;
+        text-align: center;
+        color: #2e2f42;
         margin-bottom: 8px;
 }
 .description{
-    font-family: "Roboto", sans-serif;
+    /* font-family: "Roboto", sans-serif;
         font-weight: 400;
         font-size: 16px;
         line-height: 1.5;
         letter-spacing: 0.02em;
-        color: #434455;
+        color: #434455; */
+        font-family: "Roboto", sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: 0.02em;
+            color: #434455;
 }
 .team-main{
     padding: 120px 0;
@@ -729,4 +750,19 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .modal-lower-btn:hover,
 .modal-lower-btn:focus{
     background-color: #404BBF;
+}
+
+ @media screen and (min-width: 768px){
+    .container{
+        max-width: 768px;
+        padding-left: 32px;
+        padding-right: 32px;
+    } 
+        .quality-list {
+            gap: 72px 24px;
+        }
+    
+        .quality-link {
+            flex-basis: calc((100% - 24px) / 2);
+        }
 }
