@@ -94,6 +94,9 @@ section {
 .phone-mail{
     font-style: normal;
 }
+
+/* ----------------------MOBILE MENU---------------------- */
+
 .menu{
 border: none;
 background-color: transparent;
@@ -1086,9 +1089,9 @@ background-image: linear-gradient(rgba(46, 47, 66, 0.7),
     .low-container{
         flex-wrap: nowrap;
             align-items: baseline;
-            margin: 0 auto;
             padding: 0 15px;
             gap: 0;
+            margin-left: 156px;
     }
     .form-low-wraper{
         margin-left: 80px;
